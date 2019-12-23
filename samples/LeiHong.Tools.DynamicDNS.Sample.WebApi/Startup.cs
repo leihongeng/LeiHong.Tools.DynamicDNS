@@ -27,8 +27,8 @@ namespace LeiHong.Tools.DynamicDNS.Sample.WebApi
         {
             services.AddControllers();
             services.AddTencentCloudDynamicDnsService(builder => { 
-                builder.SecretId = "AKIDhANQGqtWiFYe068JhuynEVXjlgR0GXXL";
-                builder.SecretKey = "oPBoPlGaifKsIhv2ua33sW0AG9qIoAMP";
+                builder.SecretId = "******";
+                builder.SecretKey = "*******";
             });
         }
 
