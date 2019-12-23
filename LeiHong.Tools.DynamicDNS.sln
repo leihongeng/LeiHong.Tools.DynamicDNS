@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeiHong.Tools.DynamicDNS.Core", "src\LeiHong.Tools.DynamicDNS.Core\LeiHong.Tools.DynamicDNS.Core.csproj", "{5EF06C2F-F003-490E-B1FA-635922660366}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeiHong.Tools.DynamicDNS.TencentCloud", "src\LeiHong.Tools.DynamicDNS.Tencent\LeiHong.Tools.DynamicDNS.TencentCloud.csproj", "{486A40AD-B512-4F70-88CB-B3CA6D77F396}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{425390B9-ABDA-4E0C-968B-1A294FF979AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{3CC58E8D-57A6-49AA-89C5-A8D76224A8B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeiHong.Tools.DynamicDNS.Sample.WebApi", "samples\LeiHong.Tools.DynamicDNS.Sample.WebApi\LeiHong.Tools.DynamicDNS.Sample.WebApi.csproj", "{12E4095E-864B-4512-9128-04E195B023F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EF06C2F-F003-490E-B1FA-635922660366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF06C2F-F003-490E-B1FA-635922660366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF06C2F-F003-490E-B1FA-635922660366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF06C2F-F003-490E-B1FA-635922660366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{486A40AD-B512-4F70-88CB-B3CA6D77F396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{486A40AD-B512-4F70-88CB-B3CA6D77F396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{486A40AD-B512-4F70-88CB-B3CA6D77F396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{486A40AD-B512-4F70-88CB-B3CA6D77F396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E4095E-864B-4512-9128-04E195B023F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E4095E-864B-4512-9128-04E195B023F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E4095E-864B-4512-9128-04E195B023F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E4095E-864B-4512-9128-04E195B023F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5EF06C2F-F003-490E-B1FA-635922660366} = {425390B9-ABDA-4E0C-968B-1A294FF979AD}
+		{486A40AD-B512-4F70-88CB-B3CA6D77F396} = {425390B9-ABDA-4E0C-968B-1A294FF979AD}
+		{12E4095E-864B-4512-9128-04E195B023F5} = {3CC58E8D-57A6-49AA-89C5-A8D76224A8B5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {381D2094-1286-45BD-9791-04241E5E0B6E}
+	EndGlobalSection
+EndGlobal
