@@ -52,6 +52,7 @@ namespace LeiHong.Tools.DynamicDNS.TencentCloud
             var result = string.Empty;
             foreach (var item in updateRecordList)
             {
+                if(string.IsNullOrEmpty(item)) continue;
                 var oldRecord = recordList.Data.Records.FirstOrDefault(x => x.Name == item)?.Id;
                 if (oldRecord.HasValue)
                 {
