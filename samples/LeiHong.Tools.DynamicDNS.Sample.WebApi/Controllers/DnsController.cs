@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using LeiHong.Tools.DynamicDNS.Core;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using static System.String;
 
 namespace LeiHong.Tools.DynamicDNS.Sample.WebApi.Controllers
@@ -13,11 +14,13 @@ namespace LeiHong.Tools.DynamicDNS.Sample.WebApi.Controllers
     {
 
         private readonly IDynamicDNS _dynamicDns;
+        private readonly IConfiguration _configuration;
         private static string _clientRealIp = Empty;
 
-        public DnsController(IDynamicDNS dynamicDns)
+        public DnsController(IDynamicDNS dynamicDns, IConfiguration configuration)
         {
             _dynamicDns = dynamicDns;
+            _configuration = configuration;
         }
 
         private string GetIp()
@@ -44,7 +47,7 @@ namespace LeiHong.Tools.DynamicDNS.Sample.WebApi.Controllers
                 return Ok(message);
             }
             _clientRealIp = clientRealIp;
-            return Ok(_dynamicDns.AddOrUpdateAsync("aiproject.cn", "ddns", "A", clientRealIp).Result);
+            return Ok(_dynamicDns.AddOrUpdateAsync("aiproject.cn", _configuration["records"], "A", clientRealIp).Result);
 
         }
     }

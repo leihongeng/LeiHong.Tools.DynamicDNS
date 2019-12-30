@@ -47,14 +47,21 @@ namespace LeiHong.Tools.DynamicDNS.TencentCloud
                 return new DynamicDNSResult(false, "没有任何解析记录！");
             }
 
-            var oldRecord = recordList.Data.Records.FirstOrDefault(x => x.Name == subDomain)?.Id;
-            if (oldRecord.HasValue)
+            var updateRecordList = subDomain.Split(',').ToList();
+
+            var result = string.Empty;
+            foreach (var item in updateRecordList)
             {
-               await RequestFactory.Request(new RemoveRecordRequestModel(domain, oldRecord.Value));
+                var oldRecord = recordList.Data.Records.FirstOrDefault(x => x.Name == item)?.Id;
+                if (oldRecord.HasValue)
+                {
+                    await RequestFactory.Request(new RemoveRecordRequestModel(domain, oldRecord.Value));
+                }
+                var model = new CreateRecordRequestModel(domain, subDomain, recordType, value);
+                result = await RequestFactory.Request(model);
             }
-            var model = new CreateRecordRequestModel(domain, subDomain, recordType, value);
-            var resp = await RequestFactory.Request(model);
-            return ResponseUtil.Validate(resp);
+           
+            return ResponseUtil.Validate(result);
         }
 
         public Task<DynamicDNSResult> DeleteAsync(string domain, int recordId)
