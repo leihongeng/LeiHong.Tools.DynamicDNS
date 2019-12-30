@@ -57,7 +57,7 @@ namespace LeiHong.Tools.DynamicDNS.TencentCloud
                 {
                     await RequestFactory.Request(new RemoveRecordRequestModel(domain, oldRecord.Value));
                 }
-                var model = new CreateRecordRequestModel(domain, subDomain, recordType, value);
+                var model = new CreateRecordRequestModel(domain, item, recordType, value);
                 result = await RequestFactory.Request(model);
             }
            
