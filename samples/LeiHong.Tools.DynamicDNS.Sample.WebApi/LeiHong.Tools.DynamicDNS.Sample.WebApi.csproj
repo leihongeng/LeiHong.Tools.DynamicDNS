@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Com.Ctrip.Framework.Apollo.Configuration" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\src\LeiHong.Tools.DynamicDNS.Tencent\LeiHong.Tools.DynamicDNS.TencentCloud.csproj" />
   </ItemGroup>
 
